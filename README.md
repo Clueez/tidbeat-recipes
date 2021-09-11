@@ -1,23 +1,35 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Prerequisites
+- NodeJs >= v14
+- Yarn
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
+yarn install
 yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## The Challenge.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Please clone this repo into your machine. 
+- Make sure to do the steps mentioned in Getting Started section and you have the app running on port 3000 and you can see a list of recipes.
+- We leverage the open [The Meal DB rest api](https://www.themealdb.com/api.php) to use as backend. 
+- Tasks:
+    - Change the list of recipes UI on the main page to cards as per this mockup [Link](https://ibb.co/2MfVZJv) (*Bonus*: use Material - UI)
+    - Add action on the cards so that when you click on any card you will be redirected to a detailed page as per this mockup [Link](https://ibb.co/sJRf54w)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Once you have done the code changes, please create a new branch in the format `name_recipe_challenge` to the repo and create a PR and share it back with the team. 
 
+## Things which can add value to your submission.
+- Deploy the app and share the preview URL. 
+- Add search functionality to search the recipes. 
+- Add screenshots when raising the PR. 
+- Make sure your commit messages are concise and precise. Have many atomic commits rather one single large commit. 
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
