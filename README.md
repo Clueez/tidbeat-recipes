@@ -16,14 +16,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## The Challenge.
 
-- Please clone this repo into your machine. 
+- Please fork this repo into your machine. 
 - Make sure to do the steps mentioned in Getting Started section and you have the app running on port 3000 and you can see a list of recipes.
 - We leverage the open [The Meal DB rest api](https://www.themealdb.com/api.php) to use as backend. 
 - Tasks:
     - Change the list of recipes UI on the main page to cards as per this mockup [Link](https://ibb.co/2MfVZJv) (*Bonus*: use Material - UI)
     - Add action on the cards so that when you click on any card you will be redirected to a detailed page as per this mockup [Link](https://ibb.co/sJRf54w)
 
-- Once you have done the code changes, please create a new branch in the format `name_recipe_challenge` to the repo and create a PR and share it back with the team. 
+- Once you have done the code changes, please commit all the changes made into your forked repo and please the share link of that repo. 
 
 ## Things which can add value to your submission.
 - Deploy the app and share the preview URL. 
