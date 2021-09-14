@@ -44,7 +44,7 @@ export default function Home() {
 
         <Container sx={{ my: 15 }} id={styles.fullScreen}>
           <Grid container spacing={2}>
-            {recipes.map((recipe, index) => { return (<Grid container item justifyContent="center" xs={12} lg={4} md={6}><Cards key={index} imgSrc={recipe.strMealThumb} title={recipe.strMeal} desc={recipe.strInstructions} category={recipe.strCategory} area={recipe.strArea} /> </Grid>) })}
+            {recipes.map((recipe, index) => { return (<Grid container item justifyContent="center" xs={12} lg={4} md={6}><Cards key={index} id={recipe.idMeal} imgSrc={recipe.strMealThumb} title={recipe.strMeal} desc={recipe.strInstructions} category={recipe.strCategory} area={recipe.strArea} ></Cards></Grid>) })}
           </Grid>
         </Container>
 

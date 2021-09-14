@@ -4,10 +4,13 @@ import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
+import Link from 'next/link';
 
-const Cards = ({ imgSrc, imgAlt, title, desc, category, area }) => {
+const Cards = ({ imgSrc, imgAlt, title, desc, category, area, id }) => {
     return (
+        <Link href={"/detail/"+id}>
         <Card id={styles.shadow} sx={{ maxWidth: 480 }}>
+        <a>
             <Typography variant="body2" gutterBottom className={styles.flexCont}>
                 <p className={styles.imgText}>{title.charAt(0)}</p>
                 <p id={styles.imageCont}><img id={styles.profile}></img></p>
@@ -25,7 +28,9 @@ const Cards = ({ imgSrc, imgAlt, title, desc, category, area }) => {
                     <p className={styles.delete}><i className="fas fa-trash" /></p>
                 </div>
             </CardContent>
+            </a>
         </Card>
+    </Link>
     );
 };
 
