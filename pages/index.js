@@ -4,10 +4,12 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { getRecipes } from "../client"
 
+
 // Material UI imports
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
+import { Container } from '@material-ui/core'
+import RecipeCard from '../components/RecipeCard'
 
 
 export default function Home() {
@@ -27,10 +29,10 @@ export default function Home() {
 
   useEffect(() => {
     getRecipesList();
-  }, [recipes])
+  }, [])
 
   return (
-    <div className={styles.container}>
+    <Container className={styles.container}>
       <Head>
         <title>Tidbeat Recipes App</title>
         <meta name="description" content="Sample app for recipes" />
@@ -42,44 +44,32 @@ export default function Home() {
 
       <main className={styles.main}>
         <Typography 
-          variant="h1" 
+          variant="h1"
+          component="h1"
           className={styles.title} 
           gutterBottom
         >
          Recipes List
         </Typography>
         
-        <Grid container>
-          <Grid item xs={12} md={3}>
-            <Paper>1</Paper>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <Paper>1</Paper>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <Paper>1</Paper>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <Paper>1</Paper>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <Paper>1</Paper>
-          </Grid>
-        </Grid>
-        <div className="recipe-list">
+        <Grid container className="recipe-list">
           { recipes.map((recipe, index) => 
             { 
               return (
-                <div className="recipe-card" key={index}>
-                  <li>{recipe.strMeal}</li>
-                </div>
+                <Grid 
+                  item
+                  xs={12} 
+                  md={6}
+                  lg={4}
+                  className="recipe-card" 
+                  key={index}
+                >
+                  <RecipeCard recipe={ recipe } />
+                </Grid>
               )
             }
           )}
-        </div>
-
-        
-
+        </Grid>
       </main>
 
       <footer className={styles.footer}>
@@ -94,6 +84,6 @@ export default function Home() {
           </span>
         </a>
       </footer>
-    </div>
+    </Container>
   )
 }

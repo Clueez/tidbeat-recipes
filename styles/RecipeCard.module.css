@@ -1,0 +1,15 @@
+.card {
+    margin: 16px 24px;
+    height: 400px;
+}
+.instructions {
+    height: 100px;
+    overflow: hidden;
+}
+.views {
+    margin-left: 27rem !important;
+  }
+  .viewsIcon {
+    vertical-align: middle;
+  }
+  
