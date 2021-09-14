@@ -4,6 +4,12 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { getRecipes } from "../client"
 
+// Material UI imports
+import Typography from '@material-ui/core/Typography'
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper'
+
+
 export default function Home() {
   const [recipes, setRecipes] = useState([]);
   const [isFetchingData, setIsFetchingData] = useState(true);
@@ -29,14 +35,50 @@ export default function Home() {
         <title>Tidbeat Recipes App</title>
         <meta name="description" content="Sample app for recipes" />
         <link rel="icon" href="/favicon.ico" />
+        {/* Roboto Font for Material UI */}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <Typography 
+          variant="h1" 
+          className={styles.title} 
+          gutterBottom
+        >
          Recipes List
-        </h1>
+        </Typography>
+        
+        <Grid container>
+          <Grid item xs={12} md={3}>
+            <Paper>1</Paper>
+          </Grid>
+          <Grid item xs={12} md={3}>
+            <Paper>1</Paper>
+          </Grid>
+          <Grid item xs={12} md={3}>
+            <Paper>1</Paper>
+          </Grid>
+          <Grid item xs={12} md={3}>
+            <Paper>1</Paper>
+          </Grid>
+          <Grid item xs={12} md={3}>
+            <Paper>1</Paper>
+          </Grid>
+        </Grid>
+        <div className="recipe-list">
+          { recipes.map((recipe, index) => 
+            { 
+              return (
+                <div className="recipe-card" key={index}>
+                  <li>{recipe.strMeal}</li>
+                </div>
+              )
+            }
+          )}
+        </div>
 
-        {recipes.map((recipe, index) => {return(<div key={index}> <li>{recipe.strMeal}</li></div>)})}
+        
 
       </main>
 
