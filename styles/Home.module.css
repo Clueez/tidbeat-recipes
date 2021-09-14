@@ -7,13 +7,8 @@
   align-items: center;
 }
 
-#fullScreen{
-  width: 90%;
-  margin: auto;
-}
-
 .main {
-  padding: 5rem 0;
+  padding: 20px 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -29,6 +24,7 @@
   justify-content: center;
   align-items: center;
 }
+
 
 .footer a {
   display: flex;
@@ -49,9 +45,10 @@
 }
 
 .title {
-  margin: 0;
+  margin: 0px 0px 20px 0px;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
+  padding: 15px;
 }
 
 .title,
@@ -117,13 +114,110 @@
   margin-left: 0.5rem;
 }
 
+/***Card component***/
+#fullScreen{
+  max-width: 100%;
+}
+
+#imageCont{
+  width: 15%;
+  margin: 0px;
+}
+
+.imgText{
+    position: relative;
+    left: 33px;
+    top: -8px;
+    color: white;
+    font-size: 1.6em;
+}
+
 .image{
   height: 250px;
 }
 
-@media (max-width: 600px) {
+#profile{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  margin: 5px 0px 5px 0px;
+}
+
+.name{
+  width: 70%;
+  margin: 10px 0px 0px 10px;
+  color: grey;
+}
+.flexCont{
+  display: flex;
+  padding: 8px 16px 8px 16px;
+  position: relative;
+  left: -16px;
+}
+
+.flexCont2{
+  display: flex;
+}
+
+#threeDot{
+  width: 10%;
+  text-align: right;
+}
+
+#bottom{
+  padding-bottom: 10px;
+}
+
+.blueText{
+  color: darkblue;
+}
+
+#shadow {
+  box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
+
+.like{
+  color: darkblue;
+  width: 50%;
+}
+
+.delete{
+  color: red;
+  width: 50%;
+  text-align: right;
+}
+
+.instructions{
+  height: 40px;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+  color: rgba(19, 18, 18, 0.753);
+  margin-bottom: 20px;
+}
+
+/**Extra small devices**/
+@media(max-width: 600px){
   .grid {
     width: 100%;
     flex-direction: column;
   }
+  
+}
+
+/***Small devices***/
+@media(max-width: 766px) and (min-width: 601px){
+  
+}
+
+/***Medium devices***/
+@media(min-width: 767px) and (max-width: 959px){
+  
+}
+
+/***Large devices***/
+@media(min-width: 960px) and (max-width: 1280px){
+ 
 }

@@ -7,6 +7,7 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Cards from "../components/cards";
 
+
 export default function Home() {
   const [recipes, setRecipes] = useState([]);
   const [isFetchingData, setIsFetchingData] = useState(true);
@@ -32,6 +33,8 @@ export default function Home() {
         <title>Tidbeat Recipes App</title>
         <meta name="description" content="Sample app for recipes" />
         <link rel="icon" href="/favicon.ico" />
+        <script src="https://kit.fontawesome.com/23c0e963da.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
       </Head>
 
       <main id={styles.fullScreen} className={styles.main}>
@@ -39,9 +42,9 @@ export default function Home() {
           Recipes List
         </h1>
 
-        <Container sx={{ my: 15 }}>
+        <Container sx={{ my: 15 }} id={styles.fullScreen}>
           <Grid container spacing={2}>
-            {recipes.map((recipe, index) => { return (<Grid container item justifyContent="center" xs={12} md={4}><Cards key={index} imgSrc={recipe.strMealThumb} title={recipe.strMeal} desc={recipe.strInstructions} /> </Grid>)})}
+            {recipes.map((recipe, index) => { return (<Grid container item justifyContent="center" xs={12} lg={4} md={6}><Cards key={index} imgSrc={recipe.strMealThumb} title={recipe.strMeal} desc={recipe.strInstructions} category={recipe.strCategory} area={recipe.strArea} /> </Grid>) })}
           </Grid>
         </Container>
 
