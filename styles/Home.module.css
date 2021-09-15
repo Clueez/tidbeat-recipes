@@ -234,22 +234,23 @@
 }
 
 .heart{
-  width: 5%;
+  width: 22%;
   color: blue;
-  padding: 1%;
+  padding: 0.8%;
 }
 
 .save{
-  width: 5%;
+  width: 22%;
   color: blue;
-  padding: 1%;
+  padding: 0.8%;
 }
 
 .share{
-  width: 90%;
+  width: 23%;
   text-align: right;
   color: red;
-  padding: 87%;
+  margin-left: 93%;
+  margin-top: 10px;
 }
 
 /**Extra small devices**/
