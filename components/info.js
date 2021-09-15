@@ -41,9 +41,9 @@ const Info = ({ title, instructions, imgSrc, category, area, tags, src }) => {
                 <h3>Instructions</h3>
                 <p>{instructions}</p>
                 <div className={styles.icons}>
-                    <p className={styles.save}><i className="fas fa-save"></i></p>
-                    <p className={styles.heart}><i className="far fa-heart" /></p>
-                    <p className={styles.share}><i className="fas fa-share-alt"></i></p>
+                    <div className={styles.save}><i className="fas fa-save"></i></div>
+                    <div className={styles.heart}><i className="far fa-heart" /></div>
+                    <div className={styles.share}><i className="fas fa-share-alt"></i></div>
                 </div>
             </div>
         </div>

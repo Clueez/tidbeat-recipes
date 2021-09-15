@@ -13,7 +13,7 @@ const Cards = ({ imgSrc, imgAlt, title, desc, category, area, id }) => {
         <a className={styles.link}>
             <div className={styles.flexCont}>
                 <p className={styles.imgText}>{title.charAt(0)}</p>
-                <p id={styles.imageCont}><img id={styles.profile} alt="profile"></img></p>
+                <p id={styles.imageCont}><img id={styles.profile}></img></p>
                 <p className={styles.name}><nobr className={styles.blueText}>{title}</nobr><br />
                     {category + ", " + area}</p>
                 <p id={styles.threeDot}><i className="fas fa-ellipsis-v" /></p>
@@ -24,8 +24,8 @@ const Cards = ({ imgSrc, imgAlt, title, desc, category, area, id }) => {
                     {desc}
                 </div>
                 <div className={styles.flexCont2}>
-                    <p className={styles.like}><i className="far fa-heart" /></p>
-                    <p className={styles.delete}><i className="fas fa-trash" /></p>
+                    <div className={styles.like}><i className="far fa-heart" /></div>
+                    <div className={styles.delete}><i className="fas fa-trash" /></div>
                 </div>
             </CardContent>
             </a>
