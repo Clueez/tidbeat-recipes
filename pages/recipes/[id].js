@@ -61,7 +61,7 @@ const Details = ({ recipes }) => {
                         <div>
                             <Typography 
                                 variant="caption"
-                                component="p"
+                                component="div"
                             >
                                 <p className={styles.likes}>
                                     <span className={styles.likeCount}>50</span>
