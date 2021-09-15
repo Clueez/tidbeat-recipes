@@ -1,5 +1,6 @@
 import styles from '../styles/Home.module.css';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const Info = ({ title, instructions, imgSrc, category, area, tags, src }) => {
     const [ingri, setIngri] = useState('');
@@ -27,11 +28,11 @@ const Info = ({ title, instructions, imgSrc, category, area, tags, src }) => {
     useEffect(() => {
         setSource(src);
         Ingridients(source);
-    })
+    },[src, source])
 
     return (
         <div className={styles.details}>
-            <img className={styles.detailImg} src={imgSrc} alt={title} name={title} />
+            <Image className={styles.detailImg} width={900} height={400} layout="responsive" src={imgSrc||"https://www.themealdb.com/images/media/meals/tkxquw1628771028.jpg"} alt={title} name={title} />
             <div className={styles.info}>
                 <p className={styles.titleText}>{title}</p>
                 <p>Category : <nobr className={styles.textBold}>{category}</nobr>, Area <nobr className={styles.textBold}>{area}</nobr>, Tags: <nobr className={styles.textBold}>{tags}</nobr></p>

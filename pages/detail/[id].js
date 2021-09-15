@@ -34,7 +34,7 @@ export default function Detail() {
         }catch(e){
 
         }
-    });
+    },[router.query, pageId]);
 
     return (
         <>
@@ -42,8 +42,6 @@ export default function Detail() {
                 <title>Details</title>
                 <meta name="description" content="Details for recipes" />
                 <link rel="icon" href="/favicon.ico" />
-                <script src="https://kit.fontawesome.com/23c0e963da.js" crossorigin="anonymous"></script>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
             </Head>
             <main>
                 <Info imgSrc={details.imgSrc} src={details.src} title={details.title} area={details.area} category={details.category} tags={details.tags} instructions={details.instructions} />
