@@ -113,7 +113,7 @@ export default Details;
 export async function getServerSideProps(context) {
     const {id} = context.query
     
-    const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${id}`)
+    const res = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
 
     const data = await res.json();
 

@@ -34,7 +34,7 @@ const RecipeCard = ({ recipe }) => {
         <div>
             <Card className={styles.card}>
                 <Link 
-                    href='/recipes/[id]' as={`/recipes/${recipe.strMeal}`} 
+                    href='/recipes/[id]' as={`/recipes/${recipe.idMeal}`} 
                     key={recipe.strMeal}
                     passHref
                 >   
