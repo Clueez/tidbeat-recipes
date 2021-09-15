@@ -15,10 +15,21 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import VisibilityOutlinedIcon from '@material-ui/icons/VisibilityOutlined';
 
-
+const useStyles = makeStyles({
+    cardTitle: {
+        fontSize: 80 + "important",
+        color: '#e91e63'
+    },
+    avatar: {
+        backgroundColor: '#e91e63',
+    }
+})
 
 
 const RecipeCard = ({ recipe }) => {
+
+    const classes = useStyles() 
+
     return (
         <div>
             <Card className={styles.card}>
@@ -29,22 +40,26 @@ const RecipeCard = ({ recipe }) => {
                 >   
                     <a>
                         <CardHeader
+                            className={classes.cardTitle}
                             avatar={
-                                <Avatar aria-label="recipe">
-                                R
+                                <Avatar 
+                                    className={classes.avatar}
+                                    aria-label="recipe"
+                                >
+                                { recipe.strMeal.split('')[0].toUpperCase() }
                                 </Avatar>
                             }
                             title={ recipe.strMeal }
                             subheader="September 14, 2016"
                         />
+                        <CardMedia
+                            component="img"
+                            image={recipe.strMealThumb}
+                            title=""
+                            height="200px"
+                        />
                     </a>
                 </Link>
-                <CardMedia
-                    component="img"
-                    image={recipe.strMealThumb}
-                    title=""
-                    height="200px"
-                />
                 <CardContent className={styles.instructions}>
                     <Typography 
                         variant="body2" 

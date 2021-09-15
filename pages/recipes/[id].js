@@ -45,6 +45,7 @@ const Details = () => {
                             variant="h3"
                             component="h1"
                             align="center"
+                            className={styles.title}
                             gutterBottom
                         >
                             { recipe.strMeal }

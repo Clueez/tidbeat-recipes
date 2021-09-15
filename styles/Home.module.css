@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@300;400&display=swap');
+
 .container {
   min-height: 100vh;
   padding: 0 4rem !important;
@@ -7,7 +9,9 @@
   align-items: center;
   height: 100vh;
 }
-
+.title {
+  font-family: 'Glory', sans-serif !important;
+}
 .main {
   flex: 1;
   display: flex;
