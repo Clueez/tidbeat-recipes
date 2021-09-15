@@ -198,11 +198,71 @@
   margin-bottom: 20px;
 }
 
+/******* Info component for details *********/
+.details{
+  width: 94%;
+  margin: 10px auto;
+}
+
+.detailImg{
+  width: 100%;
+  height: 400px;
+}
+
+.titleText{
+  color: blue;
+  font-size: 2em;
+  margin: 5px 0px;
+}
+
+.info{
+  padding: 2px 20px 10px 20px;
+}
+
+.textBold{
+  font-weight: bold;
+}
+
+.icons{
+  display: flex;
+}
+
+.heart{
+  width: 5%;
+  color: blue;
+}
+
+.save{
+  width: 5%;
+  color: blue;
+}
+
+.share{
+  width: 90%;
+  text-align: right;
+  color: red;
+}
+
 /**Extra small devices**/
 @media(max-width: 600px){
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+
+  .heart{
+    width: 10%;
+  }
+  
+  .save{
+    width: 10%;
+    color: blue;
+  }
+  
+  .share{
+    width: 80%;
+    text-align: right;
+    color: red;
   }
   
 }
