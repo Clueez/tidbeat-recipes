@@ -231,25 +231,27 @@
 
 .icons{
   display: flex;
+  flex-wrap: wrap;
+  height: 40px;
 }
 
 .heart{
-  width: 22%;
+  width: 45px;
   color: blue;
   padding: 0.8%;
 }
 
 .save{
-  width: 22%;
+  width: 45px;
   color: blue;
   padding: 0.8%;
 }
 
 .share{
-  width: 23%;
-  text-align: right;
+  width: 25px;
   color: red;
-  margin-left: 93%;
+  position: absolute;
+  right: 4%;
   margin-top: 10px;
 }
 
@@ -261,19 +263,18 @@
   }
 
   .heart{
-    width: 10%;
+    width: 45px;
+    padding: 1.5%;
   }
   
   .save{
-    width: 10%;
-    color: blue;
+    width: 45px;
+    padding: 1.5%;
   }
   
   .share{
-    width: 80%;
-    text-align: right;
     color: red;
-    padding: 73%;
+    margin-top: 5px;
   }
   
 }
