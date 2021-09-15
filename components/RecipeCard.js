@@ -26,16 +26,18 @@ const RecipeCard = ({ recipe }) => {
                     href='/recipes/[id]' as={`/recipes/${recipe.strMeal}`} 
                     key={recipe.strMeal}
                     passHref
-                >
-                    <CardHeader
-                        avatar={
-                            <Avatar aria-label="recipe">
-                            R
-                            </Avatar>
-                        }
-                        title={ recipe.strMeal }
-                        subheader="September 14, 2016"
-                    />
+                >   
+                    <a>
+                        <CardHeader
+                            avatar={
+                                <Avatar aria-label="recipe">
+                                R
+                                </Avatar>
+                            }
+                            title={ recipe.strMeal }
+                            subheader="September 14, 2016"
+                        />
+                    </a>
                 </Link>
                 <CardMedia
                     component="img"
