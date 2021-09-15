@@ -46,7 +46,7 @@ export default function Home() {
         <Typography 
           variant="h1"
           component="h1"
-          className={styles.title} 
+          className={styles.Pagetitle} 
           gutterBottom
         >
          Recipes List

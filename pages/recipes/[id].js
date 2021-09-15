@@ -13,32 +13,12 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 
-const Details = () => {
-    
-    const { query } = useRouter();
-    const id = query.id
+const Details = ({ recipes }) => {
 
-
-    const [recipes, setRecipes] = useState([]);
-    const [isFetchingData, setIsFetchingData] = useState(true);
-
-    const getRecipesList = async () => {
-        try {
-        const { meals } = await getRecipes(id);
-        setIsFetchingData(false);
-        setRecipes(meals ?? []);
-        } catch (e) {
-        setIsFetchingData(false);
-        console.error(e);
-        }
-    }
-    useEffect(() => {
-        getRecipesList();
-    }, [])
 
     return (
         <Container className={styles.container} maxWidth="md">
-            {recipes.map((recipe, index) => {
+            {recipes.meals.map((recipe, index) => {
                 return(
                     <div key={index}>
                         <Typography
@@ -129,3 +109,17 @@ const Details = () => {
 }
  
 export default Details;
+
+export async function getServerSideProps(context) {
+    const {id} = context.query
+    
+    const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${id}`)
+
+    const data = await res.json();
+
+    return {
+        props: {
+            recipes: data
+        }
+    }
+}
