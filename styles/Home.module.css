@@ -1,7 +1,6 @@
 .container {
-  background-color: blue;
   min-height: 100vh;
-  padding: 0 !important;
+  padding: 0 4rem !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,7 +9,6 @@
 }
 
 .main {
-  background: red;
   flex: 1;
   display: flex;
   flex-direction: column;
