@@ -1,4 +1,3 @@
-
 import axios from "axios";
 
 export const getRecipes = searchKey => {
@@ -7,7 +6,7 @@ export const getRecipes = searchKey => {
   return axios(URL, {
     method: "GET"
   })
-    .then(response => response.data)
+    .then(response =>response.data)
     .catch(error => {
       console.log(error);
       throw error;

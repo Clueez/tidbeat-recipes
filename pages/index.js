@@ -3,6 +3,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { getRecipes } from "../client"
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
+import Cards from "../components/cards";
+
 
 export default function Home() {
   const [recipes, setRecipes] = useState([]);
@@ -31,12 +35,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main id={styles.fullScreen} className={styles.main}>
         <h1 className={styles.title}>
-         Recipes List
+          Recipes List
         </h1>
 
-        {recipes.map((recipe, index) => {return(<div key={index}> <li>{recipe.strMeal}</li></div>)})}
+        <Container sx={{ my: 15 }} id={styles.fullScreen}>
+          <Grid container spacing={2}>
+            {recipes.map((recipe, index) => { return (<Grid container item justifyContent="center" xs={12} lg={4} md={6} key={index}><Cards key={index} id={recipe.idMeal} imgSrc={recipe.strMealThumb} title={recipe.strMeal} desc={recipe.strInstructions} category={recipe.strCategory} area={recipe.strArea} ></Cards></Grid>) })}
+          </Grid>
+        </Container>
 
       </main>
 
