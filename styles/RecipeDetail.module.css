@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@300;400&display=swap');
+
+.container {
+    /* background: red; */
+    margin: 24px auto;
+    width: 60% !important;
+    padding: 24px 3rem !important;
+    border: solid 2px #d3d3d3;
+}
+.tite {
+    font-family: 'Glory', sans-serif !important;
+}
+.likeIcon {
+    margin-left: -8px;
+    margin-right: 2px;
+    vertical-align: center;
+}
+.recipeArea {
+    float: right;
+    padding: 8px;
+    background: #e4d7d7;
+    border-radius: 5px;
+}
+.tags {
+    background: #e4d7d7;
+    padding: 8px;
+    margin-left: 8px !important;
+    border-radius: 5px;
+}

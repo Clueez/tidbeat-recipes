@@ -4,6 +4,14 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { getRecipes } from "../client"
 
+
+// Material UI imports
+import Typography from '@material-ui/core/Typography'
+import Grid from '@material-ui/core/Grid'
+import { Container } from '@material-ui/core'
+import RecipeCard from '../components/RecipeCard'
+
+
 export default function Home() {
   const [recipes, setRecipes] = useState([]);
   const [isFetchingData, setIsFetchingData] = useState(true);
@@ -21,23 +29,47 @@ export default function Home() {
 
   useEffect(() => {
     getRecipesList();
-  }, [recipes])
+  }, [])
 
   return (
-    <div className={styles.container}>
+    <Container className={styles.container}>
       <Head>
         <title>Tidbeat Recipes App</title>
         <meta name="description" content="Sample app for recipes" />
         <link rel="icon" href="/favicon.ico" />
+        {/* Roboto Font for Material UI */}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <Typography 
+          variant="h1"
+          component="h1"
+          className={styles.Pagetitle} 
+          gutterBottom
+        >
          Recipes List
-        </h1>
-
-        {recipes.map((recipe, index) => {return(<div key={index}> <li>{recipe.strMeal}</li></div>)})}
-
+        </Typography>
+        
+        <Grid container className="recipe-list">
+          { recipes.map((recipe, index) => 
+            { 
+              return (
+                <Grid 
+                  item
+                  xs={12} 
+                  md={6}
+                  lg={4}
+                  className="recipe-card" 
+                  key={index}
+                >
+                  <RecipeCard recipe={ recipe } />
+                </Grid>
+              )
+            }
+          )}
+        </Grid>
       </main>
 
       <footer className={styles.footer}>
@@ -52,6 +84,6 @@ export default function Home() {
           </span>
         </a>
       </footer>
-    </div>
+    </Container>
   )
 }

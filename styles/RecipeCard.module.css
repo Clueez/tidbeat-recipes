@@ -1,0 +1,22 @@
+.card {
+    margin: 16px 24px 16px 0;
+    height: 400px;
+}
+.MuiCardHeader-title	{
+  font-size: 48px !important;
+}
+.instructions {
+    height: 60px;
+    padding-bottom: 4px !important;
+    overflow: hidden;
+}
+.cardAction {
+  /* height: ; */
+}
+.viewIcon {
+  float: right !important;
+}
+  .viewsIcon {
+    vertical-align: middle;
+  }
+  
